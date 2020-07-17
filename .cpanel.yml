@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/usr/dimitril.com/
+    - export DEPLOYPATH=/home/uguiw0obdr4e/dimitril.com/
     - /bin/cp index.html $DEPLOYPATH
