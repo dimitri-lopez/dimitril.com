@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/uguiw0obdr4e/public_html/dimitril.com
-    - /bin/cp CHANGE.md $DEPLOYPATH
+    - /bin/cp -r * $DEPLOYPATH
