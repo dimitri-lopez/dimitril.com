@@ -1,0 +1,76 @@
+html, body {
+	width: auto;
+	height: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	background-color: black;
+}
+
+body {
+	margin: 0;
+	background-color: black;
+}
+
+h1 {
+	width: auto;
+	padding: 1%;
+	color:white;
+	text-align: center;
+	overflow: hidden;
+}
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+}
+
+.subpoint {
+	width: auto;
+	color: white;
+	text-align: center;
+	overflow: hidden;
+	font-size: 200%
+}
+
+a:link {
+	color: grey;
+}
+
+a:hover {
+	color: white;
+}
+
+
+
+.navbar {
+	overflow: hidden;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.navbar a {
+	float: left;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 0.7%;
+	padding-right: 20px;
+	font-size: 125%;
+	text-decoration: none;
+}
+
+.navbar a:hover {
+	background: gray;
+	color: white;
+}
+
+p {
+	width: auto;
+	color: white;
+	font-size: 125%;
+	text-align: center;
+	padding: 1%;
+}
