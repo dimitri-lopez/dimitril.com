@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/uguiw0obdr4e/public_html/
-    - /bin/cp CHANGE.md
+    - /bin/cp CHANGE.md $DEPLOYPATH
