@@ -1,18 +1,19 @@
-let width = 600;
-let height = 600;
-let midX = width / 2;
-let midY = height / 2;
+var width = 600;
+var height = 600;
+var midX = width / 2;
+var midY = height / 2;
 var array = [];
-let radian = 0;
-let radius = 250;
-let increment = 2*Math.PI / 200;
+var radian = 0;
+var radius = 250;
+var increment = 2*Math.PI / 50;
 
 
 
 function setup() {
-  createCanvas(600, 600);
-  background(0);
-
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0, 0);
+	canvas.style("z-index", "-1");
+  background(255);
 }
 
 function mousePressed(){
@@ -23,11 +24,11 @@ function mouseDragged(){
 }
 
 function draw(){
-  background(0);
+  background(255);
   stroke(255);
   strokeWeight(10);
   point(midX, midY);
-  for(i = 0; i < 2; i++){
+  for(i = 0; i < 1; i++){
     radian = radian + increment;
     x = radius * Math.cos(radian);
     y = radius * Math.sin(radian);
@@ -39,8 +40,6 @@ function draw(){
     }
   }
 
-
-
   for(i = 0; i < array.length; i++){
     array[i].updatePosition();
     let inbounds = array[i].inbounds();
@@ -50,7 +49,10 @@ function draw(){
       array.splice(i, 1)
     }
   }
-  
+}
+
+function windowResized(){
+	resizeCanvas(windowWidth, windowHeight);
 }
 
 //function draw() {

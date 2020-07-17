@@ -61,7 +61,7 @@ class MyPoint{
   }
 
   draw(){
-    stroke(255);
+    stroke(100);
     strokeWeight(5);
     point(this.x, this.y);
   }
