@@ -1,0 +1,35 @@
+.row{
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 2%;
+}
+.column2{
+  float: left;
+  width: 50%;
+  color: dimgray;
+}
+
+.column2 h1, .column3 h1{
+  text-align: center;
+  font-size: 175%;
+  padding: 0;
+}
+
+.column2 h2, .column3 h2{
+  text-align: center;
+  font-size: 165%;
+  letter-spacing: 1px;
+}
+
+.column3{
+  float: left;
+  width: 50%;
+  color: dimgray;
+  font-size: 100%;
+}
+
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}

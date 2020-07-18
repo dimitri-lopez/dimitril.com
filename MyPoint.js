@@ -11,17 +11,16 @@ class MyPoint{
 
 
     this.thetaForce = 0;
-    this.magnitude = 2;
+    this.magnitude = 9;
+
+    this.thetaForce = this.theta;
+    this.dX = this.magnitude * Math.cos(this.thetaForce);
+    this.dY = this.magnitude * Math.sin(this.thetaForce);
   }
 
   updatePosition(){
-    this.thetaForce = this.theta;
-
-    let dX = this.magnitude * Math.cos(this.thetaForce);
-    let dY = this.magnitude * Math.sin(this.thetaForce);
-
-    this.x = this.x - dX;
-    this.y = this.y - dY;
+    this.x = this.x - this.dX;
+    this.y = this.y - this.dY;
   }
 
   inbounds(){

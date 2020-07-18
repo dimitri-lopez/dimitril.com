@@ -1,31 +1,31 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link relative="stylesheet" type="text/css" href="style.css">
-  <link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script language="javascript" type="text/javascript" src="MyPoint.js"></script>
+  <link rel="stylesheet" href="navbar.css">
+  <script language="javascript" src="navbar.js" defer></script>
   <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
   <script language="javascript" src="libraries/p5.dom.js"></script>
   <script language="javascript" src="libraries/p5.sound.js"></script>
-  <script src="sketch.js"></script>
+  <script language="javascript" src="sketch.js"></script>
+  <script language="javascript" src="MyPoint.js"></script>
 </head>
 <body>
-  <nav>
-    <div class="logo">
-      <h4>Dimitri Lopez</h4>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="https:4hed.org">4HED</a></li>
-      <li><a href="particles.html">Particles</a></li>
-    </ul>
-    <div class="burger">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
+  <nav class="navbar">
+    <div class="logo">Dimitri Lopez</div>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https:4hed.org">4HED</a></li>
+        <li><a href="particles.html">Particles</a></li>
+      </ul>
     </div>
   </nav>
 
