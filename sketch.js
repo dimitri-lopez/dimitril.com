@@ -28,7 +28,7 @@ function draw(){
   stroke(255);
   strokeWeight(10);
   point(midX, midY);
-  for(i = 0; i < 4; i++){
+  for(i = 0; i < 1; i++){
     radian = radian + increment;
     x = radius * Math.cos(radian);
     y = radius * Math.sin(radian);

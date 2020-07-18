@@ -11,7 +11,7 @@ class MyPoint{
 
 
     this.thetaForce = 0;
-    this.magnitude = 9;
+    this.magnitude = 2;
 
     this.thetaForce = this.theta;
     this.dX = this.magnitude * Math.cos(this.thetaForce);
