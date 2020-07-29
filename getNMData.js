@@ -8,14 +8,27 @@ var lists;
 var newCases;
 var oldCases;
 var counties;
+var done = false;
 
+function updatePage(){
+  link = links[0];
+  var site = link;
+  $(function(){
+    $.get('proxy.php', {site:site}, function(data){
+      scrapeAlert(data);
+      links.shift();
+    }, 'html');
+  })
+}
 
 function scrapeAlert(html){
   data = html;
   html = html.toString()
   if(!html.includes("Updated New Mexico COVID-19 cases")){
-    return("");
+    updatePage();
   }
+  console.log("Scraping Alert Page...");
+
   lists = html.split("the most recent cases are:")[1];
 	newCases = lists.split("<ul>")[1].split("<\/ul>")[0];
 	oldCases = lists.split("<ul>")[3].split("<\/ul>")[0];
@@ -69,13 +82,13 @@ function scrapeAlert(html){
 
 	document.getElementById("nmNewCases").innerHTML = newCases;
 	document.getElementById("nmOldCases").innerHTML = oldCases;
+  console.log("Done scraping.");
+  return(true);
 }
 
 
 function processHTML(html){
   data = html;
-  alert(data);
-
 
   alertLinks = data.toString().split("table cellspacing");
   alertLinks = alertLinks[1];
@@ -89,29 +102,27 @@ function processHTML(html){
       continue;
     }
     url = entry.split("\"")[1]
-    url = "nmhealth.org" + url;
+    url = "https://www.nmhealth.org" + url;
     links.push(url);
-
-    $(function(){
-
-      var site = url;
-      $.get('proxy.php', {site:site}, function(data){
-        processHTML(data);
-      }, 'html');
-    })
-
   }
   
-  
+  links = links;
+  console.log("Got Links")
+  //console.log(links)
+  //END OF FUNCTION
+  //TRANSITION TO OTHER FN
+  //
+  //
+  updatePage();
 }
 
 $(function(){
-
   var site = alertsURL;
-  var site = sampleAlert;
+  //var site = sampleAlert;
   $.get('proxy.php', {site:site}, function(data){
-    //processHTML(data);
-    scrapeAlert(data);
+    processHTML(data);
+    //scrapeAlert(data);
+
   }, 'html');
 })
 

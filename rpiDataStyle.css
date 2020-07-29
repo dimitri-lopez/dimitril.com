@@ -33,3 +33,47 @@
   display: table;
   clear: both;
 }
+
+h1 {
+  color: dimgrey;
+  text-align: center;
+  padding: 0;
+}
+
+#nmCases{
+}
+
+#nmCases ul li{
+  text-align: center;
+  color: dimgrey;
+  list-style: none;
+  font-size: 1.5rem;
+  margin-bottom: 2%;
+}
+
+#nmHeader {
+  text-align: center;
+}
+
+#nmCol1 {
+  width: 50%;
+  float: left;
+}
+
+
+#nmCol1 ul, #nmCol1 h1{
+  margin-left: 20%;
+}
+
+#nmCol2 ul, #nmCol2 h1{
+  margin-right: 20%;
+}
+
+#nmCol2 {
+  width: 50%;
+  float: right;
+}
+
+
+
+
